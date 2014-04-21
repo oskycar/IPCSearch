@@ -5,12 +5,12 @@ Rectangle {
     height: 576
     Column {
         anchors.fill: parent
-        anchors.margins: 12
-        spacing: 8
+        anchors.margins: 0 //该布局与其它布局之间的距离
+        spacing: 10 //布局中每个控件之间的距离
         Button {
             id:refreshBtn
             text: "Refresh"
-            anchors.topMargin: 20
+            anchors.topMargin: 20 //该控件顶部与其它控件或布局的距离
             anchors.right: parent.right
             //onClicked: messageDialog.close()
         }
@@ -40,6 +40,7 @@ Rectangle {
            anchors.rightMargin: 0
            model: libraryModel
            width: parent.width
+           height: parent.height-refreshBtn.height-20
            //anchors.verticalCenter: parent.verticalCenter;
         }
     }
